@@ -17,7 +17,14 @@
 #ifndef _MEMTRACK_STM_H_
 #define _MEMTRACK_STM_H_
 
+/*
+ * By default the video memory is monitored through debugfs if available
+ */
+#ifdef DEBUGFS
 const char *kGraphicsMemory = "/d/gc/vidmem";
+#else
+const char *kGraphicsMemory = "/sys/devices/platform/soc/59000000.gpu/vidmem";
+#endif
 
 int memtrack_get_graphics_memory(pid_t pid,
                         struct memtrack_record *records,

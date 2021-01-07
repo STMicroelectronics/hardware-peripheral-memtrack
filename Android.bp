@@ -18,6 +18,14 @@ cc_library_shared {
     relative_install_path: "hw",
     proprietary: true,
 
+    product_variables: {
+        debuggable: {
+            cflags: [
+                "-DDEBUGFS=1",
+            ],
+        },
+    },
+
     srcs: [
         "memtrack.c",
     ],
