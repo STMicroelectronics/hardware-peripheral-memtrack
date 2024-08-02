@@ -1,22 +1,18 @@
 # hardware-memtrack #
 
-This module contains the STMicroelectronics Memtrack HAL source code.
-It is part of the STMicroelectronics delivery for Android (see the [delivery][] for more information).
+This module contains the STMicroelectronics android.hardware.memtrack binary source code.
 
-[delivery]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v2.0.0
+It is part of the STMicroelectronics delivery for Android.
 
 ## Description ##
 
-This module version is the updated version for STM32MP15 distribution for Android V2.0
+This module implements android.hardware.memtrack AIDL version 1.
 Please see the Android delivery release notes for more details.
 
 ## Documentation ##
 
 * The [release notes][] provide information on the release.
-* The [distribution package][] provides detailed information on how to use this delivery.
-
-[release notes]: https://wiki.st.com/stm32mpu/wiki/STM32MP15_distribution_for_Android_release_note_-_v2.0.0
-[distribution package]: https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package_for_Android
+[release notes]: https://wiki.st.com/stm32mpu/wiki/STM32_MPU_OpenSTDroid_release_note_-_v5.1.0
 
 ## Dependencies ##
 
@@ -24,15 +20,12 @@ This module can't be used alone. It is part of the STMicroelectronics delivery f
 
 ```
 PRODUCT_PACKAGES += \
-    memtrack.stm \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack-service.stm32mpu
 ```
-The file manifest.xml can be updated in consequence
 
 ## Containing ##
 
-This directory contains the sources and associated Android makefile to generate the memtrack.stm library.
+This directory contains the sources and associated Android makefile to generate the memtrack binary.
 
 ## License ##
 

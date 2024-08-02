@@ -1,0 +1,4 @@
+service vendor.memtrack-stm32mpu /vendor/bin/hw/android.hardware.memtrack-service.stm32mpu
+    class hal
+    user nobody
+    group system
